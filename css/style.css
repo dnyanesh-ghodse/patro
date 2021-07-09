@@ -12,7 +12,6 @@ html{
 body{
     background-color: rgb(205, 236, 236);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    position: relative;
 }
 
 .container{
@@ -20,7 +19,7 @@ body{
     /* padding: 20px; */
     margin: 0 auto;
     max-width: 100%;
-    width: 1200px;
+    width: 100vw;
     height: 90vh;  
 }
 
@@ -78,9 +77,6 @@ nav{
 
 @media screen and (max-width: 767px) {
 
-    .services{
-        margin-top: 10rem;
-    }
     .nav-ul{
         display: none;
         flex-direction: column;
@@ -183,23 +179,33 @@ nav{
     cursor: pointer;
 }
 
-.services{
-    width: 100vw;
-    height: 100vh;
-    display: flex;
+
+
+/* .section_service{
+    width: 90vw;
+    height: 90vh;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 3fr));
+} */
+
+
+.cards{
     justify-content: center;
     align-items: center;
 }
 
-.section_service{
-    width: 1200px;
-    height: max-content;
+.services{
+    margin: 0 auto;
+    max-width: 1000px;
     display: grid;
     grid-gap: 20px;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+
 }
-.service{
-    width: 260px;
+
+.service_card{
+    width: 300px;
     height: 300px;
     background-color: snow;
     position: relative;
@@ -209,6 +215,7 @@ nav{
     width: 100%;
     height: 50%;
 }
+
 .img img{
     width: 100%;
     height: 100%;
