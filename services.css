@@ -5,6 +5,7 @@
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 20px;
     align-items: center;
+    justify-content: center;
 }
 
 .grid > article {
@@ -13,7 +14,7 @@
     box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.4);
     border-radius: 20px;
     text-align: center;
-    width: 250px;
+    width: 300px;
     transition: transform .3s;
 }
 
