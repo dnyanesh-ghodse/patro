@@ -151,22 +151,94 @@ nav{
     color: oldlace;
 }
 
+.hero-text h1{
+    font-size: 60px;
+    animation: moveRight 1s ease-out;
+    color: rgb(49, 163, 184);
+    background-color: seashell;
+    text-align: center;
+    margin: 0px;
+    box-shadow: 2px 2px 10px rgba(255, 255, 255, 0.575);
+    border-bottom-right-radius: 100px;
+    border-top-left-radius: 100px;
+}
+
+.hero-text span{
+    color: rgb(255, 104, 49);
+}
+
 .hero-text p{
+    font-size: 30px;
     margin: 1rem 0;
+    animation: opact 2s ease-out;
 }
 
 .hero-text .btn{
     background-color: seashell;
+    color: rgb(21, 127, 146);
     border: navajowhite;
     padding: 10px 20px;
     font-size: 20px;
     border-radius: 50px;
+    margin-top: 30px;
+    animation: moveup 1s ease-out;
+    backface-visibility: hidden;
+    
 }
 
 .hero-text .btn:hover{
-    background-color: rgb(20, 139, 139);
+    
+    background-color: rgb(74, 200, 223);
     color: #fff;
 }
+
+@media screen and (max-width: 767px) {
+
+    .hero-text h1{
+        text-align: center;
+        font-size: 30px;
+    }
+
+    .hero-text p{
+        text-align: center;
+        font-size: 20px;
+        margin: 1rem 0;
+    }
+}
+
+
+@keyframes moveRight {
+    0%{
+        opacity: 0;
+        transform: translate(-100px);
+    }
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes moveup {
+    0%{
+        opacity: 0;
+        transform: translatey(100px);
+    }
+    100%{
+        opacity: 1;
+        transform: translatey(0);
+    }
+}
+
+@keyframes opact {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+
 
 
 /* modal */
@@ -203,16 +275,17 @@ nav{
 }
 
 .about .about_title{
-    background-color: rgb(79, 153, 196);
-    padding: 40px;
-    color: rgb(255, 255, 255);
+    padding: 20px 0;
     text-align: center;
+    margin: 50px;
+    color: rgb(74, 200, 223);
+    border-bottom: 3px solid rgb(74, 200, 223);
 }
 
 .about_title h1{
     font-size: 40px;
-    font-weight: 700;
-    color: rgb(250, 248, 135);
+    font-weight: 900;
+    color: gold;
     margin-bottom: 20px;
     text-transform: uppercase;
 }
@@ -257,6 +330,8 @@ nav{
 
 
 @media screen and (max-width: 767px) {
+
+
     .about .our_profile,.our_team, .our_mission{
         display: flex;
         flex-direction: column;
@@ -280,10 +355,12 @@ nav{
 
 
 .services_title{
-    background-color: rgb(109, 198, 228);
-    padding: 50px 0;
+    /* background-color: rgb(74, 200, 223); */
+    padding: 20px 0;
     text-align: center;
     margin: 50px;
+    color: rgb(74, 200, 223);
+    border-bottom: 3px solid rgb(74, 200, 223);
 }
 
 .services_title h1{
@@ -349,12 +426,41 @@ nav{
 
 /* our partner */
 .our_partner{
-    margin: 100px 50px;
+    margin: 50px 10px;
+    padding: 20px 10px;
     display: flex;
-    justify-content: space-between;
-
+    justify-content: center;
+    align-items: center;
+    overflow-x: scroll;
 }
 
 .our_partner img{
     width: 100px;
+    margin-left: 40px;
+}
+
+.partners_title{
+    margin: 50px;
+    padding: 20px 0;
+    color: rgb(74, 200, 223);
+    border-bottom: 3px solid rgb(74, 200, 223);
+}
+
+.partners_title h1{
+    color: gold;
+    /* width: 100%; */
+    text-align: center;
+}
+
+
+.our_partner::-webkit-scrollbar {
+  width: 0px;               /* width of the entire scrollbar */
+}
+.our_partner::-webkit-scrollbar-track {
+  background: rgb(255, 255, 255);        /* color of the tracking area */
+}
+.our_partner::-webkit-scrollbar-thumb {
+  background-color: rgb(74, 200, 223);    /* color of the scroll thumb */
+  border-radius: 2px;       /* roundness of the scroll thumb */
+  border: 5px solid rgb(255, 255, 255);  /* creates padding around scroll thumb */
 }
