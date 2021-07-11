@@ -223,6 +223,7 @@ nav{
     display: flex;
     justify-content: center;
     align-items: center;
+
 }
 
 .about .about_text,.team_text,.mission_text{
@@ -237,6 +238,7 @@ nav{
 .about img{
     width: 300px;
 }
+
 
 
 @media screen and (max-width: 767px) {
@@ -258,3 +260,55 @@ nav{
         width: 100%;
     }
 }
+
+/* services */
+
+.service_container{
+    /* background-color: cadetblue; */
+}
+
+.service_grid{
+    margin: 50px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+}
+
+.service_grid article{
+    padding: 10px;
+    box-shadow: 2px 2px 10px rgba(177, 197, 218, 0.637);
+}
+
+.service_grid article img{
+    width: 100%;
+}
+
+.service_grid article button{
+    margin-top: 10px;
+    border: none;
+    color: snow;
+    background: rgb(84, 193, 236);
+    padding: 8px 10px;
+}
+
+.service_grid article button:hover{
+    background-color: steelblue;
+}
+
+@media screen and (max-width: 767px) {
+    .service_grid{
+    grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 578px) {
+    .service_grid{
+    grid-template-columns: repeat(1, 1fr);
+    }
+
+    .service_grid article{
+        width: 100%;
+    }
+}
+
+/* our partner */
